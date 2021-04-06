@@ -3,11 +3,13 @@ Template progetto finale per l'esame di Programmazione Procedurale con Laborator
 
 Inserire
 
-Nome:
+Nome: Giacomo
 
-Cognome:
+Cognome: Monacelli
 
-Matricola:
+Matricola: 314080
 
 
 ed eventuali note sulla realizzazione del progetto, come nuove funzionalità aggiunte o modificate rispetto al testo del progetto assegnato.
+
+
