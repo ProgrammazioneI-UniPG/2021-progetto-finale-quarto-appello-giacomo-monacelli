@@ -17,7 +17,7 @@ static int numero_giocatori;
 static int numero_impostori;
 static int impostori_casuali;
 static int tipo_casuale_stanza;
-static int temp;
+static int giocatore_selezionato;
 static int caso;
 static int astronauti_assassinati;
 static int astronauti_da_uccidere;
@@ -234,10 +234,10 @@ static void stampa_giocatori() {
    giocatori[i].Nome=i;
  }
  for (int i = 0; i < numero_giocatori; ++i) {
-   temp=giocatori[i].Nome;
+   giocatore_selezionato=giocatori[i].Nome;
    caso=rand()%numero_giocatori;
    giocatori[i].Nome=giocatori[caso].Nome;
-   giocatori[caso].Nome=temp;
+   giocatori[caso].Nome=giocatore_selezionato;
  }
  for (int i = 0; i < numero_giocatori; ++i) {
    printf("\n%d° Giocatore \n", i+1);
@@ -402,7 +402,7 @@ static void giocatori_stanza() {
         if (giocatori[i].Stato==2) {
           printf("\nNella stanza c'è un giocatore assassinato."); //i giocatori nella stanza potranno usare quindi la chiamata d'emergenza
         }
-        if (giocatori[i].Stato!=3) {
+        if (giocatori[i].Stato!=3) { //non conto i giocatori defenestrati
           if (giocatori[i].Stato==1) {
             printf("\nIn questa stanza c'è il giocatore: ");
             stampa_nome(giocatori[i].Nome);
@@ -417,7 +417,7 @@ static void giocatori_stanza() {
   }
 }
 
-//Funzione per far ricominciare il giro di turni
+//Funzione per pulire la schermata
 static void pulizia(){
   static int reset;
   printf("\nPremere un numero per andare avanti: ");
