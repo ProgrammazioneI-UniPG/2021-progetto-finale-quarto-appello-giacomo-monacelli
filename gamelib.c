@@ -441,7 +441,7 @@ static void avanza(int movimento) {
         } else {
           prossima_stanza->Avanti=(struct Stanza*)malloc(sizeof(struct Stanza)); //creo la stanza siccome nessuno ci è ancora stato
           creazione_stanza(prossima_stanza->Avanti, prossima_stanza);
-          printf ("\nSei arrivanto in una nuova stanza: ");
+          printf ("\nSei arrivato in una nuova stanza: ");
           tipo_stanza(prossima_stanza->Avanti->Tipo);
           giocatori[turno_casuale].Posizione=prossima_stanza->Avanti;
           lista_stanze->Next=giocatori[turno_casuale].Posizione;
@@ -458,7 +458,7 @@ static void avanza(int movimento) {
         } else {
           prossima_stanza->Destra=(struct Stanza*)malloc(sizeof(struct Stanza)); //creo la stanza siccome nessuno ci è ancora stato
           creazione_stanza(prossima_stanza->Destra, prossima_stanza);
-          printf ("\nSei arrivanto in una nuova stanza: ");
+          printf ("\nSei arrivato in una nuova stanza: ");
           tipo_stanza(prossima_stanza->Destra->Tipo);
           giocatori[turno_casuale].Posizione=prossima_stanza->Destra;
           lista_stanze->Next=giocatori[turno_casuale].Posizione;
@@ -475,7 +475,7 @@ static void avanza(int movimento) {
         } else {
           prossima_stanza->Sinistra=(struct Stanza*)malloc(sizeof(struct Stanza)); //creo la stanza siccome nessuno ci è ancora stato
           creazione_stanza(prossima_stanza->Sinistra, prossima_stanza);
-          printf ("\nSei arrivanto in una nuova stanza: ");
+          printf ("\nSei arrivato in una nuova stanza: ");
           tipo_stanza(prossima_stanza->Sinistra->Tipo);
           giocatori[turno_casuale].Posizione=prossima_stanza->Sinistra;
           lista_stanze->Next=giocatori[turno_casuale].Posizione;
